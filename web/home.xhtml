@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title></title>
+        <meta name="viewport" content=""/>
+        <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+        <!--<link rel="stylesheet" href="../lib/w3.css"/>-->
+    </h:head>
+    <h:body>
+
+        <div class="myImageJumbotron"  >
+            <img src="resources/images/nice.jpg" alt="Majesty" style="width:100%; height: 450px;" />
+
+<!--            <div class="bottom-left">Bottom Left </div>
+            <div class="top-left"> Top Left</div>
+            <div class="top-right">Top Right </div>
+            <div class="bottom-right"> Bottom Right </div>-->
+        <div class="centered" style="font-family: initial;" > 
+            <h1> MAJESTY EVENTS </h1>
+                <P><h3 style="font-style: italic;"> Royal with a touch of satisfaction </h3></P>
+            </div>
+        </div>
+
+<b:jumbotron style="background-color: white; font-family: initial; font-style: italic;">
+    <b:container style="text-align: center; ">
+        <p ><h2 >We help you plan and manage your events</h2></p>
+    </b:container>
+</b:jumbotron>
+
+        
+<!--    <section class="gallery" style="background-color: rgb(76, 105, 114);">
+    <b:image medium-screen="one-fourth" value="/resources/images/logo1.jpg" style="height:250px; width: 320px;"  tooltip="Fun Ocassion"/>
+    <b:image medium-screen="one-fourth" value="/resources/images/logo3.jpg" style="height:250px; width: 320px;" tooltip="Getting Better!"/>
+    <b:image medium-screen="one-fourth" value="/resources/images/nice.jpg" style="height:250px; width: 320px;" tooltip="Getting Better!"/>
+    <b:image medium-screen="one-fourth" value="/resources/images/theEvents.jpg" style="height:250px; width: 320px;" tooltip="Getting Better!"/>
+
+    <b:image medium-screen="one-fourth" value="/resources/images/nice.jpg" style="height:250px; width: 320px;"  tooltip="Fun Ocassion"/>
+    <b:image medium-screen="one-fourth" value="/resources/images/theEvents.jpg" style="height:250px; width: 320px;" tooltip="Getting Better!"/>
+    <b:image medium-screen="one-fourth" value="/resources/images/logo3.jpg" style="height:250px; width: 320px;" tooltip="Getting Better!"/>
+    <b:image medium-screen="one-fourth" value="/resources/images/logo1.jpg" style="height:250px; width: 320px;"  tooltip="Fun Ocassion"/>
+    </section>-->
+    
+       <div class="gallery">
+            <img class="one" src="resources/images/nice.jpg" style="width: 24.5%; height:250px; position: initial; padding-left: 0px; padding-right: 0px; padding: 0px;"  />
+            <img class="two" src="resources/images/logo1.jpg" style="width: 24.5%; height:250px;  position: initial; padding-left: 0px; padding-right: 0px; padding: 0px;" />
+            <img class="three" src="resources/images/logo6.jpg" style="width: 24.5%; height:250px;  position: initial; padding-left: 0px; padding-right: 0px; padding: 0px; " />
+            <img class="four" src="resources/images/logo8.jpg" style="width: 25.5%; height:250px;  position: initial; padding-left: 0px; padding-right: 0px; padding: 0px;" />
+ 
+            <img class="one" src="resources/images/logo10.JPG" style="width: 24.5%; height:250px; position: initial; padding-left: 0px; padding-right: 0px; padding: 0px;"  />
+            <img class="two" src="resources/images/logo7.jpg" style="width: 24.5%; height:250px;  position: initial; padding-left: 0px; padding-right: 0px; padding: 0px;"  />
+            <img class="three" src="resources/images/theEvents.jpg" style="width: 24.5%; height:250px;  position: initial; padding-left: 0px; padding-right: 0px; padding: 0px;" />
+            <img class="four" src="resources/images/logo3.jpg" style="width: 25.5%; height:250px;  position: initial; padding-left: 0px; padding-right: 0px; padding: 0px;" />
+       </div>   <br/><br/>  
+        
+<b:panel title="Our Success Stories" collapsible="true" showCollapseLink="false" look="success" style="text-align: center">
+<b:container>
+    <b:column col-md="4">
+        <h1> Thank you</h1>
+        <p> I'd like to sincerely thank you for your expertise and care in making the funeral ceremony of our 
+        beloved late daddy a success. Thank you very much. </p>
+    </b:column>
+    <b:column col-md="4">
+        <h1> We Love Majesty's</h1>
+        <p>Hi, I am Modest. I tried Majesty's and they delivered. They helped us organise my fiance's birthday
+           party. I love the way you handled it.
+        </p>
+    </b:column>
+    <b:column col-md="4">
+        <h1>We gave them a try and they did a good job</h1>
+        <p>We wanted to celebrate the 60th birthday of our Mother. And we decided to celebrate it in grand style.
+            There was so much to do while we the children had other tasks at hand and even our kids. 
+            We thought it easier if we could contract various individuals to handle the planning,
+            decorations, food, etc. We found Majesty's Events, gave them a try and they did a good job.
+        </p>
+    </b:column>
+</b:container>
+</b:panel>
+
+    <b:panel style="background-color: #686368; color: whitesmoke ">
+    <b:container >
+        <b:form>
+        <b:column col-md="3" >
+            <h4>Categories</h4>
+            <p><b:navCommandLink action="ourGallery.xhtml" style="color: whitesmoke" value="Weddings"/></p>
+            <p><b:navCommandLink action="#" style="color: whitesmoke" >Birthdays</b:navCommandLink></p>
+            <p><b:navCommandLink action="#" style="color: whitesmoke" >Thanksgivings</b:navCommandLink></p>
+            <p><b:navCommandLink action="#" style="color: whitesmoke" >Traditional Marriages</b:navCommandLink></p>
+            <p><b:navCommandLink action="#" style="color: whitesmoke" >House Warming</b:navCommandLink></p>
+            <p><b:navCommandLink action="#" style="color: whitesmoke" >  Burial/Funeral</b:navCommandLink></p>
+        </b:column>
+        <b:column col-md="3">
+            <h4 id="contactUs">Contact Us</h4>
+            <b:form>
+             <!--No need for navCommandLink because our references will be external-->   
+            <p><a href="#" style="color: whitesmoke" ><b:iconAwesome name="fa-twitter"> @Majestyevents_official</b:iconAwesome></a></p>
+            <p><a href="#" style="color: whitesmoke" ><b:iconAwesome name="fa-facebook"> Majesty Events </b:iconAwesome></a></p>
+            <p><a href="#" style="color: whitesmoke" ><b:iconAwesome name="fa-whatsapp"> 08022624018 </b:iconAwesome></a></p>
+            <p><a href="#" style="color: whitesmoke" ><b:iconAwesome name="fa-phone"> 08022624018 </b:iconAwesome></a></p>
+            <p><a href="#" style="color: whitesmoke" ><b:iconAwesome name="fa-envelope"> info.majestyevents@gmail.com </b:iconAwesome></a></p>
+            <p><a href="#" style="color: whitesmoke" ><b:iconAwesome name="fa-instagram"> @Majestyevents_official </b:iconAwesome></a></p>
+            </b:form>
+        </b:column>
+        <b:column col-md="3">
+            <h4 id="about">About</h4>
+            <p> Majesty Events is a one stop center for handling a broad range of services in events planning
+            and execution. </p>
+            <p>You can visit us at: 
+                <b:form>
+                <p> <b:iconAwesome name="fa-map-marker"/> No 8, Thaba Tseka Street, British Villege Wuse II, Abuja.</p>
+                </b:form>
+            </p>
+        </b:column>
+
+            <b:column col-md="3">
+            <h4>Leave a message?</h4>
+            <b:form >
+                <b:column span="4">
+                    <h:outputText value="E-mail:"/>
+                </b:column>
+                <b:column span="8">
+                    <b:inputText value="" placeholder="E-mail*" fieldSize="sm" />
+                </b:column>
+                <b:column span="4">
+                    <h:outputText value="Name:" />
+                </b:column>
+                <b:column span="8">
+                    <b:inputText value="" placeholder="Name*" fieldSize="sm" />
+                </b:column>
+                <b:column span="4">
+                    <h:outputText value="Telephone:" />
+                </b:column>
+                <b:column span="8">
+                    <b:inputText value="" placeholder="Telephone:" fieldSize="sm" />
+                </b:column>
+                <b:column span="4">
+                    <h:outputText value="Message:" />
+                </b:column>
+                <b:column span="8">
+                    <b:inputTextarea value="" placeholder="Leave your message here:" fieldSize="sm" rows="2" />
+                </b:column>      
+                <b:commandButton action="#{navBean.toUsherSingUp()}" value="submit"  
+                                   icon="envelope" look="success" offset="7" span="5" />
+            </b:form>
+        </b:column>
+      </b:form>
+    </b:container>           
+</b:panel>       
+        
+        
+    </h:body>
+</html>

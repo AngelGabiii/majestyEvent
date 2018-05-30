@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <link rel="shortcut icon" href="resources/images/logo5.jpg"/>
+        <title>Majesty Events</title>
+        <meta name="GaitSolutions" content="Event planning, decorations for ceremonies, weddings, burials/funerals etc"></meta>
+    </h:head>
+    <h:body style="padding-top: 50px; padding-bottom: auto;">
+        <b:navBar  brand-img="resources/images/logo5.jpg"  brand-img-style="height: 30px; width: 58px" inverse="true" fixed="top" fluid="true" >
+        <b:form>
+            <b:navbarLinks style="font-size: medium"  >
+                <b:navLink value="Home" href="index.xhtml" ></b:navLink>
+                <b:navLink value="About" href="#about"></b:navLink>
+                <b:navLink value="Contact Us" href="#contactUs"></b:navLink>
+                <b:navCommandLink value="Gallery and Events" action="gallery.xhtml"></b:navCommandLink>
+                <b:dropMenu value="Want to be an Usher?" >
+                <b:navCommandLink value="Sing up" action="usherSingUp.xhtml" />
+                </b:dropMenu>
+            </b:navbarLinks>
+        </b:form>
+
+            <b:form  id="loginArea" styleClass="navbar-form navbar-right" rendered="false">
+                <b:inputText placeholder="Email" fieldSize="sm" />
+                <b:inputText placeholder="Password" fieldSize="sm" />
+                <b:commandButton action="#{navBean.toUsherSingUp()}" value="Sign in" look="success" icon="chevron-right" iconAlign="right"/>
+            </b:form>
+                    <!--For the LogOut Button-->
+                    <b:form id="logout" styleClass="navbar-form navbar-right" rendered="true">
+                        <b:commandButton action="index.xhtml" value="Log out" look="danger"  />
+                    </b:form>
+        </b:navBar>
+        
+  <b:panel style="margin-top:0px; margin-bottom:0px; padding-top:0px; padding-bottom:0px">
+      <p><h4>Welcome "#{Something}"</h4></p>
+  </b:panel> 
+  
+  <b:column styleClass="show-grid" style="text-align: center; margin-top:0px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; ">
+            <h2>Majesty Events</h2>
+            <h3 style="font-style: italic;">(Royal with a touch of satisfaction)</h3>
+  </b:column>
+                
+    <b:panel col-sm="3"  >
+        <b:form>
+            <b:commandLink value="View Registered Ushers" ajax="true" actionListener="#{navBean.toViewRegisteredUshers()}"
+                              look="primary"  update=":house0:house1" />  
+        
+        <b:commandLink look="primary" href="#" >Add User</b:commandLink>
+        <b:commandLink look="primary" href="#">Delete User</b:commandLink>
+        <b:commandLink look="primary" href="#">Accepted Ushers</b:commandLink>
+        <b:commandLink look="primary" href="#" value="View Messages"></b:commandLink>
+        </b:form>
+    </b:panel>
+      
+        <b:form id="house0">
+        <b:panel id="house1" col-sm="9" >
+        <h4 style="text-align: center;">#{navBean.content1()}</h4>
+        
+<!--        <ui:include src="#{navBean.toViewRegisteredUshers()}" />-->
+        
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </b:panel>
+    </b:form>
+
+    
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <ui:include src="footer.xhtml" />
+    </h:body>
+</html>
+
+
+
+
+                             <!--Comment area-->
+<!--actionListener="#{navBean.toViewRegisteredUshers()}"  For standard JSF lang-->
+<!--ajax="true" onclick="ajax:navBean.toViewRegisteredUshers()" For BootsFaces lang. They are both supported-->

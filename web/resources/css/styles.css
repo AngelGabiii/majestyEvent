@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 11, 2018, 11:18:32 AM
+    Author     : Angelis
+*/
+
+
+/* Container holding the image and the text*/
+.myImageJumbotron{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 200px;
+}
+
+/* Bottom left text*/
+.top-left{
+    position: absolute;
+    top: 8px;
+    left: 16px
+}
+
+/* Top right text*/
+.top-right{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/*Bottom Right Text */
+.bottom-right{
+    position: absolute;
+    bottom: 8px;
+    right: 16px; 
+}
+
+/* Bottom Left Text*/
+.bottom-left{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* center text*/
+.centered{
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   font-family: initial; /* does not work*/
+}
+
+/*not working yet */
+/*.myHeightAndWidth{
+   width: 68px; 
+   height: 68px;
+}*/
+
+/* for Gallery */
+
+.gallery > img{
+/*    padding: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;*/
+    width: 320px;
+    height: 250px;
+}
+
+
+/* not working */
+.footer{
+    position: absolute;
+    bottom: 0;
+}

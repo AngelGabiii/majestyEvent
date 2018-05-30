@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <link rel="shortcut icon" href="resources/images/logo5.jpg"/>
+        <title>Majesty Events</title>
+        <meta name="GaitSolutions" content="Event planning, decorations for ceremonies, weddings, burials/funerals etc"></meta>
+    </h:head>
+    <h:body style="padding-top: 50px; padding-bottom: auto;">
+        <b:navBar  brand-img="resources/images/logo5.jpg"  brand-img-style="height: 30px; width: 58px" inverse="true" fixed="top" fluid="true" >
+        <b:form>
+            <b:navbarLinks style="font-size: medium"  >
+                <b:navLink value="Home" href="index.xhtml" ></b:navLink>
+                <b:navLink value="About" href="#about"></b:navLink>
+                <b:navLink value="Contact Us" href="#contactUs"></b:navLink>
+                <b:navCommandLink value="Gallery and Events" action="gallery.xhtml"></b:navCommandLink>
+                <b:dropMenu value="Want to be an Usher?" >
+                <b:navCommandLink value="Sing up" action="usherSingUp.xhtml" />
+                </b:dropMenu>
+            </b:navbarLinks>
+        </b:form>
+
+            <b:form  id="loginArea" styleClass="navbar-form navbar-right" rendered="false">
+                <b:inputText placeholder="Email" fieldSize="sm" />
+                <b:inputText placeholder="Password" fieldSize="sm" />
+                <b:commandButton action="#{navBean.toUsherSingUp()}" value="Sign in" look="success" icon="chevron-right" iconAlign="right"/>
+            </b:form>
+                    <!--For the LogOut Button-->
+                    <b:form id="logout" styleClass="navbar-form navbar-right" rendered="true">
+                        <b:commandButton action="index.xhtml" value="Log out" look="danger"  />
+                    </b:form>
+        </b:navBar>
+        
+  <b:panel style="margin-bottom:0px;">
+      <p><h4>Welcome "#{Something}"</h4></p>
+  </b:panel> 
+        
+        <b:column col-xs="12" style="text-align: center;" >
+            <h2>Majesty Events</h2>
+            <h3 style="font-style: italic;">(Royal with a touch of satisfaction)</h3>
+      </b:column>      
+       
+        
+                    <!--The tab view begins here-->
+  <b:form>
+      
+       <b:tabView tabPosition="left" >
+       <b:tab title="View Registere Ushers" >
+               <b:container>
+                  <h4 style="text-align: left" >  Registered Ushers</h4>
+              </b:container>
+              <b:panel col-sm="9">
+                  <b:column span="4" >
+                      <h:outputText value="First name:" />
+                  </b:column>
+                  <b:column span="8">
+                       <b:inputText placeholder="Enter First Name:" />
+                  </b:column>
+                  <b:column col-sm="4">
+                      <h:outputText value="Last Name:" />
+                  </b:column>
+                  <b:column col-sm="8">
+                      <b:inputText placeholder="Enter last name"/>
+                  </b:column>
+                  <b:column col-sm="4">
+                      <h:outputText value="E-mail:" />
+                  </b:column>
+                  <b:column col-sm="8">
+                      <b:inputText placeholder="Enter your e-mail"/>
+                  </b:column>
+                  <b:column col-sm="4">
+                      <h:outputText value="Telephone:" />
+                  </b:column>
+                  <b:column col-sm="8">
+                      <b:inputText placeholder="Enter your telephone number"/>
+                  </b:column>
+                  <b:column col-sm="4">
+                      <h:outputText value="Sex:"/>
+                  </b:column>
+                  <b:column col-sm="8">
+                      <b:selectOneMenu>
+                          <f:selectItem itemLabel="Please select your gender.." />
+                          <f:selectItem itemLabel="Male" itemValue="0" />
+                          <f:selectItem itemLabel="Female" itemValue="1" />
+                      </b:selectOneMenu>
+                  </b:column>
+                  <b:column col-sm="4">
+                      <h:outputText value="Address:" />
+                  </b:column>
+                  <b:column col-sm="8">
+                      <b:inputTextarea placeholder="Enter your address" />
+                  </b:column>
+                  <b:column col-sm="4">
+                      <h:outputText value="State:"/>
+                  </b:column>
+                  <b:column col-sm="8">
+                      <b:selectOneMenu>
+                          <f:selectItem itemLabel="Please select your State ..." />
+                          <f:selectItem itemLabel="#{statesInNigeria.states}"   />
+                      </b:selectOneMenu>
+                  </b:column>
+                  
+                  <b:column col-sm="12" >
+                      <b:commandButton offset="4" value="Reject" look="danger" span="3" />
+                      <b:commandButton value="Accept" look="success" span="3" />
+                      <b:commandButton value="Status" look="default" span="2" />
+                  </b:column>
+              </b:panel>
+  
+              <b:column col-sm="3">
+                  <b:image name="The uploaded image" value="something" />
+              </b:column>
+           
+          </b:tab>
+
+           
+   <b:tab title="Add a User">
+      Put some text here.<br/>  <br/>  <br/>  <br/> njdsjddjdjj <br/>  <br/>  <br/>  <br/> hhsdhjdjdjhdjdj
+    </b:tab>
+     
+      <b:tab title="Delete User">
+              
+      </b:tab>  
+      <b:tab title="View Acepted Ushers">
+              
+      </b:tab>  
+      
+      <b:tab title="View Messages">
+   </b:tab> 
+   
+   </b:tabView>  
+</b:form>
+        
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <ui:include src="footer.xhtml" />
+    </h:body>
+</html>
+

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <link rel="shortcut icon" href="resources/images/logo5.jpg"/>
+        <title>Majesty Events</title>
+        <meta name="GaitSolutions" content="Event planning, decorations for ceremonies, weddings, burials/funerals etc"></meta>
+    </h:head>
+    <h:body>
+        <ui:include src="header.xhtml" />
+                <br/><br/><br/>
+                <h2 style="text-align: center;"> Welcome Prospective Usher</h2>
+                <br/><br/>
+
+<b:form>
+    <b:panel offset="2" col-sm="8" title="Register your details" look="success">
+        <br/><br/>
+<b:column col-sm="9">
+    <b:column span="3" >
+         <h:outputText value="First Name:" />
+    </b:column>
+    <b:column span="7" >
+         <b:inputText placeholder="Enter First Name:" />
+    </b:column>
+    <b:column span="3" >
+         <h:outputText value="Last Name:" />
+    </b:column>
+    <b:column span="7" >
+         <b:inputText placeholder="Enter Last Name:" />
+    </b:column>
+    <b:column span="3">
+         <h:outputText value="E-mail:" />
+    </b:column>
+    <b:column span="7">
+         <b:inputText placeholder="Enter your e-mail"/>
+    </b:column>
+    <b:column span="3">
+         <h:outputText value="Telephone:" />
+    </b:column>
+    <b:column span="7">
+         <b:inputText placeholder="Enter your telephone number"/>
+    </b:column>
+    <b:column span="3">
+         <h:outputText value="Sex:"/>
+    </b:column>
+    <b:column span="7">
+        <b:selectOneMenu>
+            <f:selectItem itemLabel="Please select your gender.." />
+            <f:selectItem itemLabel="Male" itemValue="0" />
+            <f:selectItem itemLabel="Female" itemValue="1" />
+        </b:selectOneMenu>
+    </b:column>
+    <b:column span="3">
+        <h:outputText value="Address:" />
+    </b:column>
+    <b:column span="7">
+        <b:inputTextarea placeholder="Enter your address" />
+    </b:column>
+    <b:column span="3">
+        <h:outputText value="State:"/>
+    </b:column>
+    <b:column span="7">
+        <b:selectOneMenu>
+            <f:selectItem itemLabel="Please select your State ..." />
+            <f:selectItem itemLabel="#{statesInNigeria.states}"   />
+        </b:selectOneMenu>
+    </b:column>
+ </b:column>
+             
+ <b:column col-sm="3">
+        <b:form>
+            <b:image name="Something" value="theUpload"/>
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+            <b:commandButton value="Browse File"  style="height: 25px; width: 117px;" />
+            <br/><br/>
+            <b:commandButton value="Upload Picture" look="success" />
+        </b:form>
+ </b:column>
+        
+ <b:commandButton  offset="3" span="6" value="Submit" look="success" /> 
+   </b:panel>     
+</b:form>           
+
+
+
+           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <ui:include src="footer.xhtml" />
+    </h:body>
+</html>
+
