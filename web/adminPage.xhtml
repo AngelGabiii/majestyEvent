@@ -21,7 +21,7 @@
                 <b:navLink value="Contact Us" href="#contactUs"></b:navLink>
                 <b:navCommandLink value="Gallery and Events" action="gallery.xhtml"></b:navCommandLink>
                 <b:dropMenu value="Want to be an Usher?" >
-                <b:navCommandLink value="Sing up" action="usherSingUp.xhtml" />
+                <b:navCommandLink value="Sing up" action="usherSingUp?faces-redirect=true" />
                 </b:dropMenu>
             </b:navbarLinks>
         </b:form>
@@ -33,12 +33,12 @@
             </b:form>
                     <!--For the LogOut Button-->
                     <b:form id="logout" styleClass="navbar-form navbar-right" rendered="true">
-                        <b:commandButton action="index.xhtml" value="Log out" look="danger"  />
+                        <b:commandButton action="index?faces-redirect=true" value="Log out" look="danger"  />
                     </b:form>
         </b:navBar>
         
   <b:panel style="margin-bottom:0px;">
-      <p><h4>Welcome "#{Something}"</h4></p>
+      <p><h4>Welcome, #{flash.keep.name}</h4></p>
   </b:panel> 
         
         <b:column col-xs="12" style="text-align: center;" >
@@ -102,7 +102,7 @@
                   <b:column col-sm="8">
                       <b:selectOneMenu>
                           <f:selectItem itemLabel="Please select your State ..." />
-                          <f:selectItem itemLabel="#{statesInNigeria.states}"   />
+                          <f:selectItems value="#{statesInNigeria.states}"   />
                       </b:selectOneMenu>
                   </b:column>
                   

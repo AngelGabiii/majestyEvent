@@ -66,13 +66,13 @@
         <h:outputText value="State:"/>
     </b:column>
     <b:column span="7">
-        <b:selectOneMenu>
-            <f:selectItem itemLabel="Please select your State ..." />
-            <f:selectItem itemLabel="#{statesInNigeria.states}"   />
+        <b:selectOneMenu >
+            <f:selectItem itemLabel="Please select your State of residence ..." />
+            <f:selectItems value="#{statesInNigeria.states}" />
         </b:selectOneMenu>
     </b:column>
  </b:column>
-             
+              
  <b:column col-sm="3">
         <b:form>
             <b:image name="Something" value="theUpload"/>

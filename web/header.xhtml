@@ -23,13 +23,13 @@
                 <b:navLink value="Contact Us" href="#contactUs"></b:navLink>
                 <b:navCommandLink value="Gallery and Events" action="gallery.xhtml"></b:navCommandLink>
                 <b:dropMenu value="Want to be an Usher?" >
-                <b:navCommandLink value="Sing up" action="usherSingUp.xhtml" />
+                <b:navCommandLink value="Sing up" action="usherSingUp?faces-redirect=true" />
                 </b:dropMenu>
             </b:navbarLinks>
         </b:form>
 
             <b:form  id="loginArea" styleClass="navbar-form navbar-right">
-                <b:inputText placeholder="Email" fieldSize="sm" />
+                <b:inputText placeholder="Email" value="#{flash.name}" fieldSize="sm" />
                 <b:inputText placeholder="Password" fieldSize="sm" />
                 <b:commandButton action="#{navBean.toAdminArea()}" value="Sign in" look="success" icon="chevron-right" iconAlign="right"/>
             </b:form>

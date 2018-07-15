@@ -25,20 +25,20 @@ public class NavigationBean implements Serializable {
     }
 
     public String toUsherSingUp() {
-        return "usherSingUp.xhtml";
+        return "usherSingUp?faces-redirect=true";
     }
 
     public String toAdminArea() {
-        return "adminPage.xhtml";
+        return "adminPage?faces-redirect=true";
     }
  
     public String toAdminArea2() {
-        return "adminPage2.xhtml";
+        return "adminPage2?faces-redirect=true";
     }
     
     public String toViewRegisteredUshers(){
     
-        return "viewRegisteredUshers.xhtml";
+        return "viewRegisteredUshers?faces-redirect=true";
     }
     
     public String content1(){
